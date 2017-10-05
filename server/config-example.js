@@ -35,7 +35,11 @@ config.couchCredentials = function() {
 };
 
 config.getProtocol = function(isSSL) {
-  return 'http' + (isSSL ? 's' : '') + '://';
+  if(isSSL){
+    return 'https://';
+  }else{
+    return 'http://';
+  }
 };
 
 config.serverURL = config.getProtocol(config.useSSL) + config.server;
