@@ -29,9 +29,8 @@ var config = {
 config.couchCredentials = function() {
   if (config.couchAdminUser && config.couchAdminPassword) {
     return config.couchAdminUser + ':' + config.couchAdminPassword + '@';
-  } else {
-    return '';
   }
+    return '';
 };
 
 config.getProtocol = function(isSSL) {
